@@ -48,19 +48,19 @@ variable "vault_cluster_size" {
 variable "consul_cluster_size" {
   description = "The number of Consul server nodes to deploy. We strongly recommend using 3 or 5."
   type        = number
-  default     = 3
+  default     = 5
 }
 
 variable "vault_instance_type" {
   description = "The type of EC2 Instance to run in the Vault ASG"
   type        = string
-  default     = "t2.micro"
+  default     = "m5.xlarge"
 }
 
 variable "consul_instance_type" {
   description = "The type of EC2 Instance to run in the Consul ASG"
   type        = string
-  default     = "t2.nano"
+  default     = "m5.2xlarge"
 }
 
 variable "consul_cluster_tag_key" {
